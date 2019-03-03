@@ -1,31 +1,79 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {
+  Platform, 
+  StyleSheet, 
+  Text, 
+  View,
+  ScrollView,
+  Button
+} from 'react-native';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+          <Button
+            onPress={() => {}} 
+            title="Teste com botão" />
+        </View>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+
+        <View style={styles.postContainer}>
+          <Text style={styles.postTitle}>
+            Estudando React Native
+          </Text>
+          <Text style={styles.postDescription}>
+            Loren Ipsum sit dolot amet
+          </Text>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -33,18 +81,30 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: "column",
+    backgroundColor: '#000'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  postContainer:{
+    marginHorizontal:20,
+    marginVertical: 10,
+    padding: 20,
+    backgroundColor: "#000",
+    borderRadius: 20,
+    textAlign:"center",
+    alignItems:"center",
+    backgroundColor: "#FFF"
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  postTitle:{
+    fontSize: 18,
+    color: "#000",
+    fontWeight:"bold",
+    marginBottom: 6,
   },
+  postDescription:{
+    color:"#666",
+    marginBottom: 10
+  },
+  buttonPadrao:{
+    backgroundColor: "#000"
+  }
 });
